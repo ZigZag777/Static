@@ -11,7 +11,7 @@ public class Zindex : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position= new Vector3(transform.position.x,transform.position.y,transform.position.y-1);
+		transform.position= new Vector3(transform.position.x,transform.position.y,transform.position.y);
 		
 	}
 }

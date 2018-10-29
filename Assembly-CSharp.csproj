@@ -51,15 +51,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Screepts\Inventory\Cell.cs" />
+     <Compile Include="Assets\Screepts\Inventory\Drag.cs" />
+     <Compile Include="Assets\Screepts\Inventory\Drop.cs" />
+     <Compile Include="Assets\Screepts\Inventory\Inventory.cs" />
+     <Compile Include="Assets\Screepts\Inventory\InventoryDraw.cs" />
+     <Compile Include="Assets\Screepts\Inventory\Item.cs" />
+     <Compile Include="Assets\Screepts\Inventory\Slot.cs" />
      <Compile Include="Assets\Screepts\other\CameraControl.cs" />
-     <Compile Include="Assets\Screepts\other\Cell.cs" />
-     <Compile Include="Assets\Screepts\other\Drag.cs" />
-     <Compile Include="Assets\Screepts\other\Drop.cs" />
-     <Compile Include="Assets\Screepts\other\Item.cs" />
+     <Compile Include="Assets\Screepts\other\InventoryOther.cs" />
+     <Compile Include="Assets\Screepts\other\proba.cs" />
      <Compile Include="Assets\Screepts\other\Zindex.cs" />
-     <Compile Include="Assets\Screepts\player\Inventory.cs" />
+     <Compile Include="Assets\Screepts\player\Anim.cs" />
+     <Compile Include="Assets\Screepts\player\Interactions.cs" />
      <Compile Include="Assets\Screepts\player\move.cs" />
      <Compile Include="Assets\Screepts\player\Triger.cs" />
+     <Compile Include="Assets\Screepts\оборудование и мебель\Chest.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

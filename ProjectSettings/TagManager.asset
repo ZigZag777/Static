@@ -6,6 +6,7 @@ TagManager:
   tags:
   - trees
   - item
+  - Chest
   layers:
   - Default
   - TransparentFX

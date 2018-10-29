@@ -24,4 +24,5 @@ public class Triger : MonoBehaviour {
 		
 		//Debug.Log(col.ToString);
 	}
+	
 }

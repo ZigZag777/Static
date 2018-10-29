@@ -79,11 +79,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameRes: Wood
-  sprite: icons/wood
+  sprite: icons/Wood
   prefab: prefab/Wood
   type: rawmaterials
   count: 1
   "MaxSta\u0441k": 25
+  Number: 0
 --- !u!212 &212133328408827584
 SpriteRenderer:
   m_ObjectHideFlags: 1

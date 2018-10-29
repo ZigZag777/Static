@@ -5,11 +5,13 @@ using UnityEngine;
 public class move : MonoBehaviour {
 
 	public Rigidbody2D PLayerForce;
+	public GameObject inventory;
 	public float PlayerSpeed;
 	public Animator HeroAmim;
+
 	
 	// Use this for initialization
-	private float dx,dy;
+	public float dx,dy;
 	public SpriteRenderer spriteTriger;
 	void Start () {
 
@@ -51,8 +53,6 @@ public class move : MonoBehaviour {
 			sbrosAnim();
 			PLayerForce.velocity=new Vector2(0,0);
 		}
-	//Debug.Log(Input.GetAxis("Horizontal"));
-
 	}
 
 
@@ -63,18 +63,17 @@ void FixedUpdate()
 void OnTriggerEnter2D(Collider2D other)
 {
 	//Debug.Log(other.tag);
-	var color1 = spriteTriger.color;
-	color1.a=1;
-	spriteTriger.color=color1;
-	
+	//var color1 = spriteTriger.color;
+	//color1.a=1;
+	//spriteTriger.color=color1;
 }
 
 
 void OnTriggerExit2D(Collider2D other)
 {
-	var color1 = spriteTriger.color;
-	color1.a=0;
-	spriteTriger.color=color1;
+	//var color1 = spriteTriger.color;
+	//color1.a=0;
+	//spriteTriger.color=color1;
 }
 
 	void sbrosAnim() {

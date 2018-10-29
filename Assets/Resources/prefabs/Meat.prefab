@@ -79,11 +79,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameRes: Meat
-  sprite: icons/meat
-  prefab: prefab/meat
+  sprite: icons/Meat
+  prefab: prefab/Meat
   type: rawmaterials
   count: 9
   "MaxSta\u0441k": 10
+  Number: 5
 --- !u!212 &212326805830846282
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -10,6 +10,7 @@ public class Item : MonoBehaviour {
 	public string type;
 	public int count;
 	public int MaxStaсk;
+	public int Number;
 	
 
 

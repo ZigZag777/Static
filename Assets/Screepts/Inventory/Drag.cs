@@ -13,17 +13,20 @@ public class Drag : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
 	void Start()
 	{
 
-		//LoadList();
+		canvas= GameObject.Find("Canvas").transform;
 	}
 
 	public void OnBeginDrag(PointerEventData eventData){
 		oldcanvas=transform.parent;
 		transform.SetParent(canvas);
 		GetComponent<CanvasGroup>().blocksRaycasts = false;
+		//print(gameObject.name);
 	 }
 
 	  
 	public void OnDrag(PointerEventData eventData){
+		//print(gameObject.name);
+		//print(transform.position.x);
 		transform.position=Input.mousePosition;
 	  }
 
@@ -36,6 +39,10 @@ public class Drag : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
 	  }
 
 	public void OnPointerClick(PointerEventData eventData){
+		//if (eventData.button == PointerEventData.InputButton.Left){
+		//	print(gameObject.name);
+		//}
+
 
 	}
 	 
