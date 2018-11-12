@@ -7,12 +7,13 @@ public class Drag : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
 
 	public Transform canvas;
 	public 	Transform oldcanvas;
+	private InventoryDraw Draw;	//ловим скрипт холдера 
 	
 
 
 	void Start()
 	{
-
+		Draw=GameObject.Find("_Holder").GetComponent<InventoryDraw>(); //ловим скрипт холдера
 		canvas= GameObject.Find("Canvas").transform;
 	}
 

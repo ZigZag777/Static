@@ -1,0 +1,26 @@
+<dialogue>
+    <node>      <!--Нод0 -->
+        <npctext>Ольма машет рукой и улыбается во все 32. 
+- Эй привет нос картошкой! Идете сегодня к Бобу?  </npctext>
+        <answers>
+            <answer tonode = "1"><text>Да. (Взять Ольму с собой).</text></answer>
+            <answer tonode = "2"><text>Не знаю. (Соврать).</text></answer>
+            <answer tonode = "0"><text>Пока. У меня и так дел много</text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+    <node>      <!--Нод1 -->
+        <npctext>- О круто! Я тоже пойду! (Ольма улыбается ещё шире, и слегка наклоняет голову вбок)</npctext>
+        <answers>
+            <answer tonode = "0"><text>Хорошо, я зайду вечером.</text><dialend>true</dialend></answer>
+            <answer tonode = "0"><text>Эм… ну ладно, я зайду вечером.</text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+    <node>      <!--Нод2 -->
+        <npctext>- Ну вы скучные… (Ольма надувает губы, но затем снова улыбается)
+- Если пойдёте, ты ведь возмешь меня с собой?</npctext>
+        <answers>
+            <answer tonode = "1"><text>Конечно! (взять Ольму с собой)</text></answer>
+            <answer tonode = "0"><text>Ну если пойдем, то возьму (Соврать)</text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+</dialogue>

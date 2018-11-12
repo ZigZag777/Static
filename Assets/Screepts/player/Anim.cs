@@ -22,9 +22,7 @@ public class Anim : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		 
-		//dx1=gameObject.GetComponent<move>().dx;
-		//dy1=gameObject.GetComponent<move>().dy;
-		//print(dx1);
+		if (gameObject.GetComponent<move>().CanMove){
 		if (Input.GetAxis("Horizontal")>0){
 
 			spriteR.sprite = sprites[2];
@@ -39,6 +37,7 @@ public class Anim : MonoBehaviour {
 		if (Input.GetAxis("Horizontal")==0 & Input.GetAxis("Vertical")<0){
 			
 			spriteR.sprite = sprites[3];
+		}
 		}
 
 	}

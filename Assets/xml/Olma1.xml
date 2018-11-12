@@ -1,0 +1,72 @@
+<dialogue>
+    <node>
+        <npctext>Ольма машет рукой и улыбается во все 32.
+- Эй привет нос картошкой! Идете сегодня к Бобу?</npctext>
+        <answers>
+            <answer tonode = "1" any="true"><text>Да. (Взять Ольму с собой)</text></answer>
+            <answer tonode = "2"><text>Не знаю.</text></answer>
+            <answer tonode = "0"><text>Пока. У меня и так дел много.</text><dialend>true</dialend></answer>
+            <answer tonode = "3" needquestvalue = "1"><text>Напомни что нужно делать.</text><questname>Quest1</questname></answer>
+        </answers>
+    </node>
+    <node>      <!--нод1  -->
+        <npctext>О круто! Я тоже пойду! (Ольма улыбается ещё шире, и слегка наклоняет голову вбок).</npctext>
+        <answers>
+            <answer tonode = "3"><text>Хорошо, я зайду вечером.</text></answer>
+            <answer tonode = "3"><text>Эм… ну ладно, приходи</text></answer>
+        </answers>
+    </node>
+    <node>      <!--нод2  -->
+        <npctext>Ну вы скучные… Если пойдёте, ты ведь возмешь меня с собой?</npctext>
+        <answers>
+            <answer tonode = "3" any="true">    <text>Конечно! (взять Ольму с собой)</text></answer>
+            <answer tonode = "3">                       <text>Ну если пойдем... тогда возьму (Соврать)</text></answer>
+        </answers>
+    </node>
+    <node>      <!--нод3  -->
+        <npctext>- Может тебе ещё что то нужно? (Ольма смотрит на тебя слегка прищурившись)</npctext>
+        <answers>
+            <answer tonode = "4" needquestvalue = "0"><text>Ольма, а у тебя нигде не завалялась приправа?</text><questname>WoodForOlma</questname></answer>
+            <answer tonode = "6" needquestvalue = "0"><text>Мне нужна приправа.</text><questname>WoodForOlma</questname></answer>
+            <answer tonode = "8" needquestvalue = "2"><text>Я принёс тебе дрова.             </text><questname>WoodForOlma</questname></answer>  
+            <answer tonode = "7" needquestvalue = "1"><text>Напомни что там тебе надо.</text><questname>WoodForOlma</questname></answer>
+            <answer tonode = "3" ><text>Пока. у меня и так дел много</text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+    <node>      <!--нод4  -->      
+        <npctext>- А что мне за это будет? (Ольма улыбается и смотрит на тебя из под челки)</npctext>
+        <answers>
+            <answer tonode = "5"><text>А что тебе нужно?</text></answer>
+            <answer tonode = "6"><text>Просто скажи есть или нет.</text></answer>
+            <answer tonode = "3"><text>Да ну тебя, проще будет у зелёного купить.</text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+    <node>      <!--нод5  -->      
+        <npctext>- Мне дрова нужны. Нарубить то некому... (Ольма пристально на тебя смотрит) </npctext>
+        <answers>
+            <answer tonode = "3" questvalue="1"><text>Хорошо, я принесу (Требуется 5 брёвен)</text><questname>WoodForOlma</questname><dialend>true</dialend><description>Нужно принести 5 брёвен Ольме </description></answer>
+            <answer tonode = "3"><text>Некогда мне тебе дрова рубить.</text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+    <node>      <!--нод6  -->      
+        <npctext>У меня есть приправа, но нужны дрова. 5 хороших брёвен будет достаточно</npctext>
+        <answers>
+            <answer tonode = "3" questvalue="1"><text>Хорошо, я принесу (Требуется 5 брёвен)</text><questname>WoodForOlma</questname><dialend>true</dialend><description>Нужно принести 5 брёвен Ольме </description></answer>
+            <answer tonode = "3"><text>Некогда мне тебе дрова рубить.</text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+    <node>      <!--нод7  -->      
+        <npctext>Ты прикалываешься? Мне нужно 5 брёвен.</npctext>
+        <answers>
+            <answer tonode = "3"><text>Хорошо принесу.</text><questname>woodforolma</questname><dialend>true</dialend></answer>
+            <answer tonode = "3" questvalue="0"><text>Знаешь, мне некогда тебе дрова искать.</text><questname>WoodForOlma</questname><dialend>true</dialend></answer>
+        </answers>
+    </node>
+    <node>      <!--нод8  -->      
+        <npctext>- О! Спасибо! Знаешь, если бы попросил получше, я бы тебе и так дала… приправу…</npctext>
+        <answers>
+            <answer tonode = "3" needquestvalue = "2" questvalue="3"><text>Эмм.. Спасибо.                                                              </text><questname>WoodForOlma</questname><dialend>true</dialend><finished>true</finished><description>Задание Ольмы выполнено</description></answer>
+            <answer tonode = "3" needquestvalue = "2" questvalue="3"><text>В следующий раз буду заранее просить получше</text><questname>WoodForOlma</questname><dialend>true</dialend><finished>true</finished><description>Задание Ольмы выполнено</description></answer>
+        </answers>
+    </node>
+</dialogue>

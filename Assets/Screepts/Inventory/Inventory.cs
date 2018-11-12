@@ -38,8 +38,16 @@ public class Inventory : MonoBehaviour {
 		return Panel.transform.childCount-list.Count;
 	}
 
-	public int CECFR(Item it){ 	//Count empty cells for resourses возвращает количество русурсов плжлюоанного айтема, которые можно засунуть в инвентарь
-												//входит айтем предмета
+	public int CountRes(string NameRes){
+		int count=0;
+		for (int i=0;i<list.Count;i++){
+			if (list[i].NameRes==NameRes){
+				count+=list[i].count;
+			}
+		}
+		return count;
+	}
+	public int CECFR(Item it){ 	//Count empty cells for resourses возвращает количество русурсов айтема, которые можно засунуть в инвентарь входит айтем предмета
 				
 		int rest=0;
 		for (int i=0;i<list.Count;i++){
@@ -55,9 +63,8 @@ public class Inventory : MonoBehaviour {
 		int count =list.Count;
 		int rest=0;
 		//item = other.GetComponent<Item>(); 	//итем подобранного предмета
-		if (item!=null){    				//Проверяем нормальный ли итем пришёл
+		//if (item!=null){    				//Проверяем нормальный ли итем пришёл
 			for (int i=0;i<count;i++){			//бежим по инвентарю
-		
 				if (list[i].prefab==item.prefab & list[i].count!=item.MaxStaсk){	//если нашли в инвентаре что уже было, то стакаем
 					checkrepeat=true;
 					if (list[i].count+item.count+rest<=list[i].MaxStaсk){		//проверяем можно ли засунуть в стак
@@ -77,9 +84,45 @@ public class Inventory : MonoBehaviour {
 				list.Add(item);
 			}
 
+		//}
+		if (Panel.activeSelf){
+			Draw.UpdateInventory(Panel,list);
+		}
+	}
+
+	public void RemoveFromInventory(string NameRes, int Count){
+		if (Count<=CountRes(NameRes)){
+		int count =list.Count;
+		int rest=Count;
+		bool NeedDelete=false;
+		for (int i=0;i<count;i++){		//бежим по инвентарю
+			if (list[i].NameRes==NameRes ){
+				if (list[i].count-rest>0){
+					list[i].count-=rest;
+					i=count;
+				}
+				else{
+					rest-=list[i].count;
+					list[i].count=0;
+					Panel.transform.GetChild(list[i].Number).GetComponent<Cell>().IsEmpty=true;
+					NeedDelete=true;
+				}
+			}
+		}
+		while (NeedDelete){		//удаляем нулевые строки из инвентаря
+			NeedDelete=false;
+			count =list.Count;
+    		for (int i=0;i<count;i++){
+				if (list[i].count==0){
+					list.Remove(list[i]);
+					NeedDelete=true;
+					i=count;
+				}
+			}
 		}
 		if (Panel.activeSelf){
 			Draw.UpdateInventory(Panel,list);
 		}
+	}
 	}
 }

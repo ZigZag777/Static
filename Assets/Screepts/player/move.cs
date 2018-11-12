@@ -8,13 +8,14 @@ public class move : MonoBehaviour {
 	public GameObject inventory;
 	public float PlayerSpeed;
 	public Animator HeroAmim;
+	public bool CanMove;
 
 	
 	// Use this for initialization
 	public float dx,dy;
 	public SpriteRenderer spriteTriger;
 	void Start () {
-
+		CanMove=true;
 		PLayerForce = GetComponent<Rigidbody2D>();
 		//spriteTriger=GetComponent<SpriteRenderer>();
 		
@@ -22,36 +23,39 @@ public class move : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		 dirvelocity();
+		//print(Time.frameCount / Time.time);
+		if (CanMove){
+		dirvelocity();
 		if (Input.GetKey (KeyCode.W)) 
 		{
-			sbrosAnim();
-			HeroAmim.SetBool ("Up",true);
+			//sbrosAnim();
+			//HeroAmim.SetBool ("Up",true);
 			PLayerForce.velocity=new Vector2(dx,dy);
 		}
 
 		if (Input.GetKey (KeyCode.S)) 
 		{
-			sbrosAnim();
-			HeroAmim.SetBool ("Down",true);	
+			//sbrosAnim();
+			//HeroAmim.SetBool ("Down",true);	
 			PLayerForce.velocity=new Vector2(dx,dy);
 		}
 
 		if (Input.GetKey (KeyCode.A)) 
 		{
-			sbrosAnim();
-			HeroAmim.SetBool ("Left",true);	
+			//sbrosAnim();
+			//HeroAmim.SetBool ("Left",true);	
 			PLayerForce.velocity=new Vector2(dx,dy);
 		}
 		if (Input.GetKey (KeyCode.D)) 
 		{
-			sbrosAnim();
-			HeroAmim.SetBool ("Right",true);
+			//sbrosAnim();
+			//HeroAmim.SetBool ("Right",true);
 			PLayerForce.velocity=new Vector2(dx,dy);
 		}
 		if (Input.anyKey == false) {
-			sbrosAnim();
+			//sbrosAnim();
 			PLayerForce.velocity=new Vector2(0,0);
+		}
 		}
 	}
 

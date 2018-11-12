@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour {
+public class Item  : MonoBehaviour  {
 
 	public string NameRes;
 	public string sprite;
@@ -12,6 +12,4 @@ public class Item : MonoBehaviour {
 	public int MaxStaсk;
 	public int Number;
 	
-
-
 }

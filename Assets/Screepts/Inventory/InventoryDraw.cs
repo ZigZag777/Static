@@ -11,6 +11,8 @@ public class InventoryDraw : MonoBehaviour {
 	public GameObject container;
  	public bool NeedUpdate=false;	//метка обозначающая необходимость обновить инвентарь, чекается при поднятии или перетаскивания предмета 
 
+	
+	/*
 	public void InitInventory(GameObject panel, List<Item> list){
 		Panel=panel;
 		ListItem=list;
@@ -21,11 +23,15 @@ public class InventoryDraw : MonoBehaviour {
 			CloseInventory();
 		}
 	}
-	void OpenInventory(){
+	*/
+	public void OpenInventory(GameObject panel, List<Item> list){
+		Panel=panel;
+		ListItem=list;
 		Panel.SetActive(true);
 		UpdateInventory(Panel, ListItem);
 	}
-	void CloseInventory(){
+	public void CloseInventory(GameObject panel){
+		Panel=panel;
 		Panel.SetActive(false);
 		for (int i=0;i<Panel.transform.childCount;i++){
 			if (Panel.transform.GetChild(i).transform.childCount>0){
